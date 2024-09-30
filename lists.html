@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Lists</title>
-    </head>
-    <body>
-        <p>
-            
-       </p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+</head>
+<body>
+
+<button onclick="askUser()">Click Me</button>
+<div id="output"></div>
+
+<script>
+    function askUser() {
+        // Show prompt dialog
+        let userResponse = window.prompt("Please enter your name:");
+        
+        // Simulate closing behavior (this won't actually close the prompt)
+        setTimeout(() => {
+            if (userResponse) {
+                document.getElementById("output").innerHTML = `Hello, ${userResponse}!`;
+            } else {
+                document.getElementById("output").innerHTML = "No name entered.";
+            }
+        }, 5000); // Wait for 5 seconds to show the output
+    }
+</script>
+
+</body>
 </html>
